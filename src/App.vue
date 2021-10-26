@@ -1,10 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <BasketCalculator name="Vue Invoice Calc" />
   </div>
 </template>
 
@@ -30,3 +26,16 @@
   }
 }
 </style>
+<script>
+import Vue from "vue";
+import BasketCalculator from "@/views/BasketCalculator/BasketCalculator";
+const Component = Vue.extend({
+  components: {
+    BasketCalculator,
+  },
+  props: {
+    name: String,
+  },
+});
+export default Component;
+</script>
